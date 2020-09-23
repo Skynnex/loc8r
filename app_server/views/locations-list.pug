@@ -1,0 +1,62 @@
+extends layout
+
+block content
+  .row.banner
+    .col-12
+      h1 Loc8r
+        small &nbsp;   Trouvez des lieux avec du WiFi où travailler autour de vous
+  
+  .row
+    .col-12.col-md-8
+      .card
+        .card-block
+          h4  
+            a(href='/location') Starcups
+            small &nbsp;
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+            span.badge.badge-pill.badge-default.float-right 100m
+          p.adress 65 rue Michel Ange, 72100, Le Mans
+          .facilities
+            span.badge.badge-warning Boissons chaudes
+            span.badge.badge-warning Nourriture
+            span.badge.badge-warning Fibre
+
+      .card
+        .card-block
+          h4  
+            a(href='/location') Café du coin
+            small &nbsp;
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star 
+              i.fas.fa-star
+              i.fas.fa-star
+            span.badge.badge-pill.badge-default.float-right 350m
+          p.adress 65 rue du coin, 72100, Le Mans
+          .facilities
+            span.badge.badge-warning Fibre
+            span.badge.badge-warning Boissons chaudes
+
+      .card
+        .card-block
+          h4  
+            a(href='/location') Médiathèque Sud
+            small &nbsp;
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+              i.fas.fa-star
+            span.badge.badge-pill.badge-default.float-right 500m
+          p.adress 65 rue des glonnières, 72100, Le Mans
+          .facilities
+            span.badge.badge-warning Fibre
+            span.badge.badge-warning Livres
+            
+
+    .col-12.col-md-4
+      p.lead Loc8r vous aide à trouver des lieux où travailler autour de vous !
