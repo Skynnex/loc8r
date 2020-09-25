@@ -41,8 +41,8 @@ const locationInfo = (req, res) => {
       adress: '65 rue Michel Ange, 72100, Le Mans',
       rating: 3,
       facilities: ['Boissons chaudes', 'Nourriture sur le pouce', 'Fibre'],
-      map: {lat: 47.9779384, lng: 0.2150212},
-      openingHours: [
+      coords: {lat: 47.9779384, lng: 0.2150212},
+      openingTimes: [
         {
           days: 'Lundi - Vendredi',
           opening: '7:00', 
@@ -60,7 +60,7 @@ const locationInfo = (req, res) => {
           closed: true
         }
       ], 
-      customerReview: [{
+      reviews: [{
         author: 'Simon Holmes',
         date: '16 February 2017',
         rating: 4,
