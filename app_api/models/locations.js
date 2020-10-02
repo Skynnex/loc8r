@@ -28,7 +28,10 @@ const reviewSchema = new mongoose.Schema({
     min: 0,
     max: 5
   },
-  revieText: String
+  reviewText: {
+    type: String,
+    required: true
+  }
 });
 
 const locationSchema = new mongoose.Schema({
