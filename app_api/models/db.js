@@ -4,6 +4,7 @@ const readLine = require('readline');
 let dbURI = 'mongodb://localhost/Loc8r';
 if(process.env.NODE_ENV === 'production') {
   dbURI = process.env.MONGODB_URI ;
+  console.log(dbURI);
 }
 mongoose.connect(dbURI, {useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true});
 mongoose.connection.on('connected', () => {

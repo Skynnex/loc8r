@@ -3,7 +3,7 @@ const apiOptions = {
   server: 'http://localhost:3000'
 };
 if(process.env.NODE_ENV === 'production') {
-  apiOptions.server = 'https://safe-dawn-18187.herokuapp.com/' ;
+  apiOptions.server = 'https://safe-dawn-18187.herokuapp.com' ;
 }
 
 const showError = (req, res, statusCode) => {
@@ -95,6 +95,7 @@ const homelist = (req, res) => {
       maxDistance: 5000
     }
   };
+  console.log(requestOptions);
   request(
     requestOptions,
     (err, {statusCode}, body) => {
@@ -125,7 +126,7 @@ const renderDetailPage = (req, res, location) => {
       title: location.name
     },
     sidebar: {
-      context: ' is on Loc8r because it has accessible wifi and space to sit down with your laptop and get some work done.',
+      context: 'TODO is on Loc8r because it has accessible wifi and space to sit down with your laptop and get some work done.',
       callToAction: 'If you\'ve been and you like it - or if you don\'t - please leave a review to help other people just like you.'
     },
     location
