@@ -1,12 +1,14 @@
 <template>
   <div>
-    <!-- <h1>La liste des lieux près de vous</h1> -->
     <Location
       v-for="location in locations"
       :key="location.id"
       :locationModel="location"
     />
-    <!-- <Location :locationModel="locationStatic" /> -->
+    <!-- <Location v-for="location in locationStatic"
+      :key="location.id"
+      :locationModel="location" 
+    /> -->
   </div>
 </template>
 
@@ -25,39 +27,41 @@ export default defineComponent({
 
   async setup() {
     const location = useLocationService();
-    // // const locations = ref<Array<LocationModel> | null>(null);
-    // // locations.value = await location.list();
-    // console.log(locations.value);
-
-    // const locationStatic = ref<Array<LocationModel>>([{
-    //   id: "123AZE",
-    //   name: "Truc",
-    //   adress: "123 rue abc",
-    //   rating: 3,
-    //   facilities: ["abcd", "efgh"],
-    //   distance: "200m"
-    // },
-    // {
-    //     id: "123fg",
-    //     name: "Abc",
-    //     adress: "machin",
-    //     rating: 4,
-    //     facilities: ["wh", "je", "ap"],
-    //     distance: "125"
-    //   },
-    //   {
-    //     id: "456aze",
-    //     name: "Def",
-    //     adress: "truc",
-    //     rating: 3,
-    //     facilities: ["wh", "je", "ap"],
-    //     distance: "300"
-    //   }]);
-
-    // return { locationStatic };
+    const locations = ref<Array<LocationModel> | null>(null);
+    locations.value = await location.list();
+    console.log(`Données de locations.value dans LocationList :`);
+    console.log(locations.value);
+  
     return {
-      // locations
+      locations
     };
+          //  Le jeu de données statiques qui fonctionne
+          // const locationStatic = ref<Array<LocationModel>>([{
+        //   id: "123AZE",
+        //   name: "Truc",
+        //   adress: "123 rue abc",
+        //   rating: 3,
+        //   facilities: ["abcd", "efgh"],
+        //   distance: "200m"
+        // },
+        // {
+        //     id: "123fg",
+        //     name: "Abc",
+        //     adress: "machin",
+        //     rating: 4,
+        //     facilities: ["wh", "je", "ap"],
+        //     distance: "125"
+        //   },
+        //   {
+        //     id: "456aze",
+        //     name: "Def",
+        //     adress: "truc",
+        //     rating: 3,
+        //     facilities: ["wh", "je", "ap"],
+        //     distance: "300"
+        //   }]);
+    
+        // return { locationStatic };
   }
 });
 </script>
