@@ -3,7 +3,7 @@ import axios from "axios";
 
 export function useLocationService() {
   return {
-    async list(){
+    async list(): Promise<Array<LocationModel>>{
       const params = { //L'API attend des coordonnées GPS
         lng: 0.2185714,
         lat: 47.9791214,

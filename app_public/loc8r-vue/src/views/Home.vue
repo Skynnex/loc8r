@@ -2,7 +2,10 @@
   <div class="container content">
     <div class="row banner">
       <div class="col-12 col-md-8">
-        <LocationList />
+        <Suspense>
+          <LocationList />
+          <template #fallback>Loading...</template>
+        </Suspense>
       </div>
     </div>
   </div>

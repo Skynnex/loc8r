@@ -3,6 +3,6 @@ export interface LocationModel {
   name: string;
   adress: string;
   rating: number;
-  facilities: string[];
+  facilities: Array<string>;
   distance: string;
 }
